@@ -172,10 +172,10 @@ function fix_sidemenu() {
   top = scrolltop()    
   if (w < 993 && w > 600) {
     if (top == 0) {
-      document.getElementById("sidenav").style.top = "144px";
+      document.getElementById("sidenav").style.top = "44px";
     }
     if (top > 0 && top < 100) {
-      document.getElementById("sidenav").style.top = (144 - top) + "px";      
+      document.getElementById("sidenav").style.top = (44 - top) + "px";      
     }
     if (top > 100) {
       document.getElementById("sidenav").style.top = document.getElementById("topnav").offsetHeight + "px";
@@ -190,10 +190,10 @@ function fix_sidemenu() {
     document.getElementById("leftmenuinner").style.paddingTop = "0"; //SCROLLNYTT
   } else {
     if (top == 0) {
-      document.getElementById("sidenav").style.top = "112px";      
+      document.getElementById("sidenav").style.top = "44px";      
     }
     if (top > 0 && top < 66) {
-      document.getElementById("sidenav").style.top = (112 - top) + "px";      
+      document.getElementById("sidenav").style.top = (44 - top) + "px";      
     }
     if (top > 66) {
       document.getElementById("sidenav").style.top = "44px";
