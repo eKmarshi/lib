@@ -49,7 +49,7 @@ function skyscraperResize() {
 }
 function browserResize() {
   if (k42 == true) {
-    if (Number(w3_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
+    if (Number(km_getStyleValue(document.getElementById("main"), "height").replace("px", "")) > 2200) {
       if (document.getElementById("snhb-mid_content-0")) {
         snhb.queue.push(function(){  snhb.startAuction(["main_leaderboard", "wide_skyscraper", "mid_content", "sidebar_sticky", "bottom_medium_rectangle", "right_bottom_medium_rectangle"]); });
       }
@@ -117,7 +117,7 @@ function open_menu() {
   if (m.style.display == "block") {
     close_menu();
   } else {
-    w3_close_all_nav();  
+    km_close_all_nav();  
     m.style.display = "block";
     if (document.getElementsByClassName) {
       x = document.getElementsByClassName("chapter")
@@ -285,12 +285,12 @@ function open_search(elmnt) {
     elmnt.innerHTML = "<span style='font-family:verdana;font-weight:bold;'>X</span>";
   }
 }
-function w3_open_nav(x) {
+function km_open_nav(x) {
   var contentNode, h, menuHeight;
   if (document.getElementById("nav_" + x).style.display == "block") {
-    w3_close_nav(x);
+    km_close_nav(x);
   } else {
-    w3_close_all_nav();
+    km_close_all_nav();
     document.getElementById("nav_" + x).style.display = "block";    
     if (document.getElementById("topnavbtn_" + x)) {
       document.getElementById("topnavbtn_" + x).getElementsByTagName("i")[0].style.display = "none";
@@ -304,7 +304,7 @@ function w3_open_nav(x) {
     document.getElementById("nav_" + x).style.height = (h - 106) + "px";
   }
 }
-function w3_close_nav(x) {
+function km_close_nav(x) {
   document.getElementById("nav_" + x).style.display = "none";
   if (document.getElementById("topnavbtn_" + x)) {
     document.getElementById("topnavbtn_" + x).getElementsByTagName("i")[0].style.display = "inline";
@@ -312,14 +312,14 @@ function w3_close_nav(x) {
     document.getElementById("nav_" + x).style.height = "";
   }
 }
-function w3_close_all_nav() {
-  w3_close_all_topnav();
+function km_close_all_nav() {
+  km_close_all_topnav();
   close_menu();
 }
-function w3_close_all_topnav() {
-  w3_close_nav("tutorials");
-  w3_close_nav("references");
-  w3_close_nav("exercises");
+function km_close_all_topnav() {
+  km_close_nav("tutorials");
+  km_close_nav("references");
+  km_close_nav("exercises");
 }
 (function () {
   var x, y, i, a, b, c, cc, d, m;
@@ -367,20 +367,20 @@ function w3_close_all_topnav() {
   for (i = 0; i < x.length; i++) {
     a = document.location.pathname;
     b = x[i].pathname;
-    if ((x[i].parentNode.tagName == "LI" || x[i].parentNode.className.indexOf("w3-bar") > -1) && a.substr(0, a.indexOf("/",1)) ==  b.substr(0, b.indexOf("/",1))) {
+    if ((x[i].parentNode.tagName == "LI" || x[i].parentNode.className.indexOf("km-bar") > -1) && a.substr(0, a.indexOf("/",1)) ==  b.substr(0, b.indexOf("/",1))) {
       x[i].className += " active";
     }
   }
   if (window.addEventListener) { 
-    document.getElementById("main").addEventListener("click", w3_close_all_nav, true);
-    m.addEventListener("click", w3_close_all_topnav, true);
-    document.getElementById("right").addEventListener("click", w3_close_all_nav, true);
-    document.getElementById("main").addEventListener("wheel", w3_close_all_nav, true);
-    document.getElementById("main").addEventListener("touchstart", w3_close_all_nav, true);
+    document.getElementById("main").addEventListener("click", km_close_all_nav, true);
+    m.addEventListener("click", km_close_all_topnav, true);
+    document.getElementById("right").addEventListener("click", km_close_all_nav, true);
+    document.getElementById("main").addEventListener("wheel", km_close_all_nav, true);
+    document.getElementById("main").addEventListener("touchstart", km_close_all_nav, true);
   } else if (window.attachEvent) {         
-    document.getElementById("main").attachEvent("onclick", w3_close_all_nav);
-    m.attachEvent("onclick", w3_close_all_topnav);
-    document.getElementById("right").attachEvent("onclick", w3_close_all_nav);
+    document.getElementById("main").attachEvent("onclick", km_close_all_nav);
+    m.attachEvent("onclick", km_close_all_topnav);
+    document.getElementById("right").attachEvent("onclick", km_close_all_nav);
   }
   if ('ontouchstart' in window || 'onmsgesturechange' in window) {
     document.getElementById("leftmenuinnerinner").style.overflowY = "scroll";
@@ -396,7 +396,7 @@ function w3_close_all_topnav() {
 function searchfield_focus(obj) {
   obj.style.color = "";
   obj.style.fontStyle = "";
-  if (obj.value == "Search w3schools.com") {obj.value = "";}
+  if (obj.value == "Search kmschools.com") {obj.value = "";}
 }
 var addr = document.location.href;
 function displayError() {
@@ -430,7 +430,7 @@ function sendErr() {
 }
 function clickFBLike() {
   document.getElementById("fblikeframe").style.display = 'block';
-  document.getElementById("popupDIV").innerHTML = "<iframe src='/fblike.asp?r=" + Math.random() + "' frameborder='no' style='height:200px;width:250px;'></iframe><br><button onclick='hideFBLike()' class='w3-btn w3-black'>Close</button>";
+  document.getElementById("popupDIV").innerHTML = "<iframe src='/fblike.asp?r=" + Math.random() + "' frameborder='no' style='height:200px;width:250px;'></iframe><br><button onclick='hideFBLike()' class='km-btn km-black'>Close</button>";
 }
 function hideFBLike() {
   document.getElementById("fblikeframe").style.display = 'none';
@@ -531,9 +531,9 @@ function openGoogleTranslate() {
     _loadJs(b + '/translate_static/js/element/main_no.js');
   })();
 }
-/* w3codecolor ver 1.32 by w3schools.com */
+/* kmcodecolor ver 1.32 by kmschools.com */
 (
-function w3CodeColor() {
+function kmCodeColor() {
   var x, i, j, k, l, modes = ["html", "js", "java", "css", "sql", "python", "kotlin"];
   if (!document.getElementsByClassName) {return;}
   k = modes.length;
@@ -541,10 +541,10 @@ function w3CodeColor() {
     x = document.getElementsByClassName(modes[j] + "High");
     l = x.length;
     for (i = 0; i < l; i++) {
-      x[i].innerHTML = w3CodeColorize(x[i].innerHTML + " ", modes[j]);
+      x[i].innerHTML = kmCodeColorize(x[i].innerHTML + " ", modes[j]);
     }
 }
-function w3CodeColorize(x, lang) {
+function kmCodeColorize(x, lang) {
   var tagcolor = "mediumblue";
   var tagnamecolor = "brown";
   var attributecolor = "red";
@@ -615,9 +615,9 @@ function w3CodeColorize(x, lang) {
   }
   function htmlMode(txt) {
     var rest = txt, done = "", php, comment, angular, startpos, endpos, note, i;
-    php = new extract(rest, "&lt;\\?php", "?&gt;", phpMode, "W3PHPPOS");
+    php = new extract(rest, "&lt;\\?php", "?&gt;", phpMode, "kmPHPPOS");
     rest = php.rest;
-    comment = new extract(rest, "&lt;!--", "--&gt;", commentMode, "W3HTMLCOMMENTPOS");
+    comment = new extract(rest, "&lt;!--", "--&gt;", commentMode, "kmHTMLCOMMENTPOS");
     rest = comment.rest;
     while (rest.indexOf("&lt;") > -1) {
       note = "";
@@ -648,10 +648,10 @@ function w3CodeColorize(x, lang) {
     angular = new extract(rest, "{{", "}}", angularMode);
     rest = angular.rest;
     for (i = 0; i < comment.arr.length; i++) {
-        rest = rest.replace("W3HTMLCOMMENTPOS", comment.arr[i]);
+        rest = rest.replace("kmHTMLCOMMENTPOS", comment.arr[i]);
     }
     for (i = 0; i < php.arr.length; i++) {
-        rest = rest.replace("W3PHPPOS", php.arr[i]);
+        rest = rest.replace("kmPHPPOS", php.arr[i]);
     }
     return rest;
   }
@@ -705,7 +705,7 @@ function w3CodeColorize(x, lang) {
   }
   function cssMode(txt) {
     var rest = txt, done = "", s, e, comment, i, midz, c, cc;
-    comment = new extract(rest, /\/\*/, "*/", commentMode, "W3CSSCOMMENTPOS");
+    comment = new extract(rest, /\/\*/, "*/", commentMode, "kmCSSCOMMENTPOS");
     rest = comment.rest;
     while (rest.search("{") > -1) {
       s = rest.search("{");
@@ -731,7 +731,7 @@ function w3CodeColorize(x, lang) {
     rest = rest.replace(/{/g, "<span class='cssdelimitercolor' style=color:" + cssdelimitercolor + ">{</span>");
     rest = rest.replace(/}/g, "<span class='cssdelimitercolor' style=color:" + cssdelimitercolor + ">}</span>");
     for (i = 0; i < comment.arr.length; i++) {
-        rest = rest.replace("W3CSSCOMMENTPOS", comment.arr[i]);
+        rest = rest.replace("kmCSSCOMMENTPOS", comment.arr[i]);
     }
     return "<span class='cssselectorcolor' style=color:" + cssselectorcolor + ">" + rest + "</span>";
   }
@@ -781,7 +781,7 @@ function w3CodeColorize(x, lang) {
       cc = rest.substr(i, 1);
       if (cc == "\\") {
         esc.push(rest.substr(i, 2));
-        cc = "W3JSESCAPE";
+        cc = "kmJSESCAPE";
         i++;
       }
       tt += cc;
@@ -807,7 +807,7 @@ function w3CodeColorize(x, lang) {
     }
     rest = done + rest;
     for (i = 0; i < esc.length; i++) {
-      rest = rest.replace("W3JSESCAPE", esc[i]);
+      rest = rest.replace("kmJSESCAPE", esc[i]);
     }
     return "<span class='jscolor' style=color:" + jscolor + ">" + rest + "</span>";
   }
@@ -856,7 +856,7 @@ function w3CodeColorize(x, lang) {
       cc = rest.substr(i, 1);
       if (cc == "\\") {
         esc.push(rest.substr(i, 2));
-        cc = "W3JSESCAPE";
+        cc = "kmJSESCAPE";
         i++;
       }
       tt += cc;
@@ -882,7 +882,7 @@ function w3CodeColorize(x, lang) {
     }
     rest = done + rest;
     for (i = 0; i < esc.length; i++) {
-      rest = rest.replace("W3JSESCAPE", esc[i]);
+      rest = rest.replace("kmJSESCAPE", esc[i]);
     }
     return "<span class='javacolor' style=color:" + javacolor + ">" + rest + "</span>";
   }
@@ -904,7 +904,7 @@ function w3CodeColorize(x, lang) {
       cc = rest.substr(i, 1);
       if (cc == "\\") {
         esc.push(rest.substr(i, 2));
-        cc = "W3JSESCAPE";
+        cc = "kmJSESCAPE";
         i++;
       }
       tt += cc;
@@ -930,7 +930,7 @@ function w3CodeColorize(x, lang) {
     }
     rest = done + rest;
     for (i = 0; i < esc.length; i++) {
-      rest = rest.replace("W3JSESCAPE", esc[i]);
+      rest = rest.replace("kmJSESCAPE", esc[i]);
     }
     return "<span class='kotlincolor' style=color:" + kotlincolor + ">" + rest + "</span>";
   }
