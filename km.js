@@ -166,44 +166,6 @@ if (window.addEventListener) {
   window.attachEvent("ontouchmove", function () {fix_sidemenu(); });
   window.attachEvent("onload", function () {fix_sidemenu(); });
 }
-function fix_sidemenu() {
-  var w, top;
-  w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  top = scrolltop()    
-  if (w < 993 && w > 600) {
-    if (top == 0) {
-      document.getElementById("sidenav").style.top = "44px";
-    }
-    if (top > 0 && top < 100) {
-      document.getElementById("sidenav").style.top = (44 - top) + "px";      
-    }
-    if (top > 100) {
-      document.getElementById("sidenav").style.top = document.getElementById("topnav").offsetHeight + "px";
-      document.getElementById("belowtopnav").style.paddingTop = "44px";    
-      document.getElementById("googleSearch").style.position = "fixed";
-      document.getElementById("googleSearch").style.top = "0";
-      document.getElementById("google_translate_element").style.position = "fixed";
-      document.getElementById("google_translate_element").style.top = "0";
-    } else {
-      document.getElementById("google_translate_element").style.position = "fixed";
-    }
-    document.getElementById("leftmenuinner").style.paddingTop = "0"; //SCROLLNYTT
-  } else {
-    if (top == 0) {
-      document.getElementById("sidenav").style.top = "44px";      
-    }
-    if (top > 0 && top < 66) {
-      document.getElementById("sidenav").style.top = (44 - top) + "px";      
-    }
-    if (top > 66) {
-      document.getElementById("sidenav").style.top = "44px";
-      if (w > 992) {document.getElementById("leftmenuinner").style.paddingTop = "44px";} //SCROLLNYTT
-      document.getElementById("belowtopnav").style.paddingTop = "44px";    
-    } else {
-      if (w > 992) { document.getElementById("leftmenuinner").style.paddingTop = (112 - top) + "px";} //SCROLLNYTT
-    }
-  }
-}
 function sidemenuitemintoview() {
   var a, b, i = 0;
   a = document.getElementById("leftmenuinnerinner");
