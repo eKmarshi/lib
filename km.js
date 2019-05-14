@@ -200,7 +200,7 @@ function open_translate(elmnt) {
   var a = document.getElementById("google_translate_element");
   if (a.style.display == "") {
     a.style.display = "none";
-    elmnt.innerHTML = "<span class='fas fa-search'></span>";
+    elmnt.innerHTML = "<span class='fa fa-globe'></span>";
   } else {
     a.style.display = "";
     if (window.innerWidth > 500) {
@@ -216,7 +216,7 @@ function open_search(elmnt) {
   if (a.style.display == "") {
     a.style.display = "none";
     a.style.paddingRight = "";
-    elmnt.innerHTML = "<span class='fa fa-globe'></span>";    
+    elmnt.innerHTML = "<span class='fas fa-search'></span>";    
   } else {
     a.style.display = "";  
     if (window.innerWidth > 700) {
