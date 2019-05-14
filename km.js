@@ -189,9 +189,9 @@ function fix_sidemenu() {
     } else {
       document.getElementById("belowtopnav").style.paddingTop = "0";
       document.getElementById("topnav").style.position = "relative";
-      document.getElementById("googleSearch").style.position = "absolute";
+      document.getElementById("googleSearch").style.position = "fixed";
       document.getElementById("googleSearch").style.top = "";
-      document.getElementById("google_translate_element").style.position = "absolute";
+      document.getElementById("google_translate_element").style.position = "fixed";
       document.getElementById("google_translate_element").style.top = "";
     }
     document.getElementById("leftmenuinner").style.paddingTop = "0"; //SCROLLNYTT
@@ -257,11 +257,11 @@ function open_translate(elmnt) {
   var a = document.getElementById("google_translate_element");
   if (a.style.display == "") {
     a.style.display = "none";
-    elmnt.innerHTML = "&#xe801;";
+    elmnt.innerHTML = "<span class='fas fa-search'></span>";
   } else {
     a.style.display = "";
     if (window.innerWidth > 500) {
-      a.style.width = "40%";
+      a.style.width = "16%";
     } else {
       a.style.width = "100%";
     }
@@ -273,7 +273,7 @@ function open_search(elmnt) {
   if (a.style.display == "") {
     a.style.display = "none";
     a.style.paddingRight = "";
-    elmnt.innerHTML = "&#xe802;";    
+    elmnt.innerHTML = "<span class='fa fa-globe'></span>";    
   } else {
     a.style.display = "";  
     if (window.innerWidth > 700) {
