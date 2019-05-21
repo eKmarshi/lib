@@ -204,7 +204,7 @@ function open_translate(elmnt) {
   } else {
     a.style.display = "";
     if (window.innerWidth > 500) {
-      a.style.width = "16%";
+      a.style.width = "160px";
     } else {
       a.style.width = "100%";
     }
