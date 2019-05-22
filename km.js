@@ -339,7 +339,7 @@ function km_close_all_topnav() {
 function searchfield_focus(obj) {
   obj.style.color = "";
   obj.style.fontStyle = "";
-  if (obj.value == "Search kmschools.com") {obj.value = "";}
+  if (obj.value == "Search kmarshub.com") {obj.value = "";}
 }
 var addr = document.location.href;
 function displayError() {
@@ -398,7 +398,7 @@ function printPage() {
   }
   var head = document.getElementsByTagName("head")[0].innerHTML;
   var myWindow=window.open('','','');
-  myWindow.document.write("<html><head>"+head+"<style>body{padding:15px;}@media print {.printbtn {display:none;}}</style></head><body><button class='printbtn' onclick='window.print()'>Print Page</button><br><br>"+content+"<p><a href='/about/about_copyright.asp'>Copyright 1999-2019</a> by Refsnes Data. All Rights Reserved.</p></body></html>");
+  myWindow.document.write("<html><head>"+head+"<style>body{padding:15px;}@media print {.printbtn {display:none;}}</style></head><body><button class='printbtn' onclick='window.print()'>Print Page</button><br><br>"+content+"<p><a href='/2010/07/copyright.html'>Copyright 2019</a> by KMARS HUB. All Rights Reserved.</p></body></html>");
 }
 function openGoogleTranslate() {
   var d = "text/javascript",
@@ -474,7 +474,7 @@ function openGoogleTranslate() {
     _loadJs(b + '/translate_static/js/element/main_no.js');
   })();
 }
-/* kmcodecolor ver 1.32 by kmschools.com */
+/* KMARS HUB codecolor ver 5.1 by kmarshub.com */
 (
 function kmCodeColor() {
   var x, i, j, k, l, modes = ["html", "js", "java", "css", "sql", "python", "kotlin"];
