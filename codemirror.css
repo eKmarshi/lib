@@ -145,7 +145,7 @@ THE SOFTWARE.
 .cm-s-default .cm-punctuation {} /* section is empty*/
 .cm-s-default .cm-property {color:brown;} /* css property (border,font-size)lime*/
 .cm-s-default .cm-m-javascript.cm-property {color: green;} /* java variable (etc getelement)black*/
-.cm-s-default .cm-operator {color:black;} /* java operator (=) section is empty*/
+.cm-s-default .cm-operator {} /* java operator (=) section is empty no color for multi theme*/
 .cm-s-default .cm-variable-2 {color: purple /*#05a*/;} /* java variable (x,y)black*/
 .cm-s-default .cm-variable-3 {color: purple /*#085*/;} /* #085; */
 .cm-s-default .cm-comment {color: yellowgreen/*#a50*/;} /* css comment yellowgreen*/
